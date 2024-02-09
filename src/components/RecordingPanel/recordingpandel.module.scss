@@ -1,0 +1,90 @@
+.record__wrapper {
+    height: 67px;
+    margin-top: 8px;
+    display: flex;
+    font-size: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    & svg {
+        width: 38px !important;
+    }
+    & .first__section {
+        border-radius: var(--wrapper-br);
+        background-color: #2b2b2b;
+        padding: 0 14px 0 30px;
+        width: 759px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            & > * + * {
+                margin-left: 14px;
+            }
+            & span {
+                color: #ff6000;
+            }
+        }
+    }
+    & .second__section {
+        border-radius: var(--wrapper-br);
+        background-color: #2b2b2b;
+        padding: 0 14px 0 28px;
+        width: 345px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & p {
+            font-size: 16px;
+        }
+        & div {
+            border-radius: var(--button-br);
+            padding: 12px 48px;
+            font-size: 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0097ef;
+            background-color: #151515;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .record__wrapper {
+        height: 46px;
+        font-size: 10px;
+        margin: 8px 7px 0 7px;
+        & svg {
+            width: 24px !important;
+        }
+        & .first__section {
+            padding: 0 6px 0 18px;
+            width: 500px;
+            border-radius: 8px;
+            & div {
+                & > * + * {
+                }
+                & span {
+                }
+            }
+        }
+        & .second__section {
+            width: auto;
+            padding: 0 7px 0 7px;
+            gap: 7px;
+            border-radius: 8px;
+            & p {
+                font-size: 10px;
+            }
+            & div {
+                padding: 12px 14px;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+.mixers__wrapper {
+    z-index: 10;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    backdrop-filter: blur(50px);
+    background-color: var(--bg-color-mixer);
+    border-radius: var(--wrapper-br);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    overflow: hidden;
+    & .title {
+        & > * {
+            &:nth-child(1) {
+                font-size: 60px;
+                margin-bottom: 29px;
+                background: linear-gradient(
+                    var(--orange-color-top),
+                    var(--orange-color-bottom)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    & .pressets {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 58px;
+        & > * + * {
+            margin-left: 6px;
+        }
+    }
+    & .effects__wrapper {
+        width: 100%;
+        height: 428px;
+        overflow-x: auto;
+        position: relative;
+        & > div {
+            padding: 0 13px 0;
+            position: absolute;
+            width: 1200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @media (max-width: 915px) {
+                padding: 0;
+                position: relative;
+                width: auto;
+            }
+        }
+    }
+}
+.title__close_desctop {
+    padding: 26px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    background: linear-gradient(
+        var(--primary-color-top),
+        var(--primary-color-bottom)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    & > * + * {
+        margin-top: 11px;
+    }
+    & div {
+        & svg {
+            fill: var(--primary-color-top);
+        }
+    }
+}
+
+@media (max-width: 915px) {
+    .mixers__wrapper {
+        margin: 0 auto;
+        flex-direction: row;
+        padding: 10px 8px 10px 20px;
+        height: 267px;
+        & > * {
+            &:nth-child(1) {
+            }
+            &:nth-child(2) {
+                margin-right: 8px;
+            }
+        }
+        & .title {
+            display: flex;
+            flex-direction: column;
+            width: 320px;
+            & > * {
+                &:nth-child(1) {
+                    margin-bottom: 31px;
+                    font-size: 30px;
+                }
+            }
+            &__basket {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+                margin-top: 24px;
+
+                & p {
+                    font-size: 8px;
+                    width: 10%;
+                }
+            }
+            &__close {
+                margin-top: 17px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                transform: translateX(-14px);
+                & svg {
+                    width: 63px;
+                    height: 10px;
+                }
+                & p {
+                    font-size: 9px;
+                    color: var(--primary-color);
+                }
+            }
+        }
+        .pressets__wrapper_mob {
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            & .slider__next {
+                & img {
+                    rotate: 90deg;
+                    height: 10px;
+                }
+            }
+        }
+        & .pressets {
+            flex-direction: column;
+            gap: 2px;
+            margin-bottom: 0;
+            align-self: flex-start;
+            height: 214px;
+            overflow: hidden;
+            width: 102px;
+            & > * {
+                height: 36px;
+            }
+            & > * + * {
+                margin-left: 0px;
+            }
+        }
+        & .effects__wrapper {
+            width: 100%;
+            padding: 0;
+            height: auto;
+            overflow: auto;
+            align-self: flex-start;
+            & > div {
+                padding: 0;
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+}

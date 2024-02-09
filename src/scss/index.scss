@@ -1,0 +1,280 @@
+@import "variables";
+@import "../fonts/RobotoCondensed.css";
+@import "../fonts/Roboto.css";
+
+/* =========================
+=================== STYLE VARIABLES =================*/
+:root {
+    --gray-text: #9f9e9f;
+    --bg-color: #5a5a5a;
+
+    @media (max-width: 915px) {
+        --bg-color-mixer: rgba(67, 67, 67, 0.68);
+    }
+    --bg-color-mixer: rgba(67, 67, 67, 0.85);
+
+    --bg-color-wrapper: #505050;
+
+    --gray-color-top: #636363;
+    --gray-color-bottom: #7c7c7c;
+
+    --primary-color-text: #00a3ff;
+    --primary-color: #0186d3;
+    --primary-color-top: #0099f1;
+    --primary-color-bottom: #36b4ff;
+
+    --violet-color-text: #b65fff;
+    --violet-color: #8a31fc;
+    --violet-color-top: #7b1bf7;
+    --violet-color-bottom: #9443ff;
+
+    --orange-color-text: #fa7c49;
+    --orange-color: #ea6938;
+    --orange-color-top: #d95725;
+    --orange-color-bottom: #fd7f4d;
+
+    --green-color-text: #00c662;
+    --green-color: #00aa55;
+    --green-color-top: #009449;
+    --green-color-bottom: #00c963;
+
+    --yellow-color-text: #dcf000;
+    --yellow-color: #c1ca02;
+    --yellow-color-top: #aea704;
+    --yellow-color-bottom: #d1e400;
+
+    --red-color-bottom: #ff0000;
+    --red-color-top: #c90000;
+
+    --dark-color: #434343;
+
+    --track-primary-top: #0099f1;
+    --track-primary-bottom: #0176bb;
+    --track-primary-bg: #00283f;
+    --track-aqua-top: #00e9f1;
+    --track-aqua-bottom: #009fa7;
+    --track-aqua-bg: #023e41;
+    --track-green-top: #00f155;
+    --track-green-bottom: #04a353;
+    --track-green-bg: #003b15;
+    --track-yellow-top: #d0e200;
+    --track-yellow-bottom: #aea904;
+    --track-yellow-bg: #514f00;
+    --track-orange-top: #fe804d;
+    --track-orange-bottom: #da5726;
+    --track-orange-bg: #3e1100;
+    --track-violet-top: #9a4cff;
+    --track-violet-bottom: #7b1bf8;
+    --track-violet-bg: #350079;
+
+    --button-br: 6px;
+    --wrapper-br: 14px;
+}
+
+/* =========================
+=================== SPECIFICATION =================*/
+
+* {
+    box-sizing: border-box;
+    line-height: 100%;
+    @media (max-width: 915px) {
+        cursor: none !important;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    @media (max-width: 1024px) {
+    }
+}
+
+.main__container {
+    max-width: $xl;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    @media (max-width: 1200px) {
+        margin: 0 12px;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+button {
+    background: transparent;
+    border: 0;
+}
+
+/* inspired by react-bootstrap @SEE https://react-bootstrap.github.io/ */
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.mb-4 {
+    margin-bottom: 3rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: lowercase;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* width */
+*::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: #2f2f2f;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        var(--primary-color-bottom),
+        var(--primary-color-top)
+    );
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 103, 182);
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+// Упрощаем работу с изображениями
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.next-header {
+    height: 18px;
+    transform: translate(-8px, 1px);
+    @media (max-width: 915px) {
+        transform: translateY(-1px);
+        // height: 13px;
+    }
+}

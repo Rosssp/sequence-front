@@ -1,0 +1,108 @@
+.thumb {
+    width: 42px;
+    height: 21px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #303030;
+    cursor: pointer;
+    position: relative;
+    @media (max-width: 915px) {
+        width: 93px;
+        height: 43px;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+    & div {
+        font-size: 10px;
+        gap: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media (max-width: 915px) {
+            margin: 0 auto;
+            width: 80%;
+            font-size: 19px;
+        }
+    }
+    & input {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        &:checked + .slider::before {
+            right: 55%;
+        }
+    }
+    & .slider {
+        position: absolute;
+        cursor: pointer;
+        width: 80%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        @media (max-width: 915px) {
+            width: 94%;
+            height: 120%;
+        }
+        &::before {
+            transition: all 0.2s;
+            position: absolute;
+            content: "";
+            right: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            top: 14%;
+            right: 0;
+            text-align: center;
+            @media (max-width: 915px) {
+                width: 37px;
+                height: 37px;
+            }
+        }
+    }
+}
+
+.primary {
+    &::before {
+        background: linear-gradient(
+            var(--primary-color-bottom),
+            var(--primary-color-top)
+        );
+    }
+}
+.violet {
+    &::before {
+        background: linear-gradient(
+            var(--violet-color-bottom),
+            var(--violet-color-top)
+        );
+    }
+}
+.orange {
+    &::before {
+        background: linear-gradient(
+            var(--orange-color-bottom),
+            var(--orange-color-top)
+        );
+    }
+}
+.green {
+    &::before {
+        background: linear-gradient(
+            var(--green-color-bottom),
+            var(--green-color-top)
+        );
+    }
+}
+.yellow {
+    &::before {
+        background: linear-gradient(
+            var(--yellow-color-bottom),
+            var(--yellow-color-top)
+        );
+    }
+}

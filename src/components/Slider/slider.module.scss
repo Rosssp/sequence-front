@@ -1,0 +1,88 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 180px;
+    &__body {
+        display: flex;
+        flex-direction: column-reverse;
+        // gap: 6px;
+        justify-content: space-between;
+        position: relative;
+        rotate: -90deg;
+    }
+    & ul {
+        margin-bottom: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        writing-mode: vertical-rl;
+        font-size: 11px;
+        text-align: right;
+        color: var(--gray-text);
+    }
+    &__input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: 0;
+        width: 154px;
+        height: 7px;
+
+        border-radius: 1px;
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 14px;
+            height: 13px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 50;
+            box-shadow: 0px 0px 2px 0px black;
+        }
+        &__leftside {
+            font-size: 11px;
+        }
+    }
+    &__footer {
+        height: 18px;
+        font-size: 12px;
+    }
+}
+
+.primary {
+    color: var(--primary-color-text);
+    &::-webkit-slider-thumb {
+        background-color: var(--primary-color-top);
+    }
+}
+.violet {
+    color: var(--violet-color-text);
+    &::-webkit-slider-thumb {
+        background-color: var(--violet-color-top);
+    }
+}
+.orange {
+    color: var(--orange-color-text);
+    &::-webkit-slider-thumb {
+        background-color: var(--orange-color-top);
+    }
+}
+.green {
+    color: var(--green-color-text);
+    &::-webkit-slider-thumb {
+        background-color: var(--green-color-top);
+    }
+}
+.yellow {
+    color: var(--yellow-color-text);
+    &::-webkit-slider-thumb {
+        background-color: var(--yellow-color-top);
+    }
+}

@@ -1,0 +1,23 @@
+.footer {
+    font-family: "Roboto";
+    font-weight: 400;
+    color: #b0b0b0;
+    width: 264px;
+    margin: 64px auto 75px;
+    text-align: center;
+    font-size: 10px;
+    & p {
+        text-transform: none;
+        & span {
+            margin-top: 12px;
+        }
+    }
+    & div {
+        margin-top: 32px;
+        & img {
+            margin: 0 auto;
+            width: 75px;
+            margin-bottom: 6px;
+        }
+    }
+}

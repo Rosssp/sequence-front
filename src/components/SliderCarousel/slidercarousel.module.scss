@@ -1,0 +1,32 @@
+.swiperEffects {
+    margin-left: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+    // overflow: hidden;
+    & > * {
+        // height: 110px !important;
+        // width: 168px !important;
+        // display: grid !important;
+        flex-direction: row !important;
+    }
+}
+
+.effectSlide {
+    margin: 0 0 4px 0 !important;
+}
+
+.slider {
+    // display: flex;
+    // flex-direction: row;
+    position: relative;
+}
+.slider__next {
+    width: 10px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 20;
+    top: 37%;
+    right: -13%;
+}

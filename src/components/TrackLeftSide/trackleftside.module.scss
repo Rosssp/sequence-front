@@ -1,0 +1,154 @@
+.track__container {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    height: 80px;
+    align-items: center;
+    position: relative;
+    & .progressbar {
+        margin-right: 1px;
+        height: 75%;
+        width: 6px;
+        border-radius: 10px;
+        background: linear-gradient(
+            var(--green-color-bottom),
+            var(--green-color-top)
+        );
+    }
+    & .sound__button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        background: linear-gradient(
+            var(--gray-color-bottom),
+            var(--gray-color-top)
+        );
+        & svg {
+            z-index: 1;
+            fill: white;
+            width: 70%;
+        }
+    }
+    & .track__header__wrapper {
+        height: 100%;
+        background: linear-gradient(
+            var(--gray-color-bottom),
+            var(--gray-color-top)
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 12px 0 12px 11px;
+        border-radius: 0 10px 10px 0;
+        width: 220px;
+        & .track__header {
+            font-size: 16px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            & .rec {
+                margin-right: 11px;
+                cursor: pointer;
+                padding: 4px 8px;
+                font-size: 12px;
+                color: white;
+                background-color: #505050;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.mutedBg {
+    pointer-events: none;
+    user-select: none;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--gray-color-top) 0px,
+        var(--gray-color-top) 10px,
+        #999999 10px,
+        #999999 20px
+    ) !important;
+}
+
+.recActive {
+    background: linear-gradient(
+        var(--red-color-bottom),
+        var(--red-color-top)
+    ) !important;
+    outline: 2px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.primary {
+    background: linear-gradient(
+        var(--primary-color-bottom),
+        var(--primary-color-top)
+    ) !important;
+}
+.violet {
+    background: linear-gradient(
+        var(--violet-color-bottom),
+        var(--violet-color-top)
+    ) !important;
+}
+.orange {
+    background: linear-gradient(
+        var(--orange-color-bottom),
+        var(--orange-color-top)
+    ) !important;
+}
+.green {
+    background: linear-gradient(
+        var(--green-color-bottom),
+        var(--green-color-top)
+    ) !important;
+}
+.yellow {
+    background: linear-gradient(
+        var(--yellow-color-bottom),
+        var(--yellow-color-top)
+    ) !important;
+}
+
+@media (max-width: 915px) {
+    .track__container {
+        font-size: 16px;
+        gap: 3px;
+        height: 60px;
+        & .progressbar {
+            margin-right: 1px;
+            width: 4px;
+        }
+        & .sound__button {
+            & svg {
+            }
+        }
+        & .track__header__wrapper {
+            height: 100%;
+            background: linear-gradient(
+                var(--gray-color-bottom),
+                var(--gray-color-top)
+            );
+            flex-direction: row;
+            justify-content: space-between;
+            width: 158px;
+            & .track__header {
+                width: 100%;
+                font-size: 16px;
+                & .rec {
+                    cursor: pointer;
+                    padding: 4px 8px;
+                    font-size: 12px;
+                    color: white;
+                    background-color: #505050;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}

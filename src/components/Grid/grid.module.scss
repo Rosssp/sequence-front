@@ -1,0 +1,291 @@
+.wrapper {
+}
+.grid__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #434343;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--wrapper-br) var(--wrapper-br) 0 0;
+
+    @media (max-width: 915px) {
+        // height: 212px;
+        height: 230px;
+        overflow-y: scroll;
+        position: relative;
+    }
+}
+.grid__container {
+    height: 626px;
+    border-radius: var(--wrapper-br);
+    background-color: var(--bg-color-wrapper);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+    @media (max-width: 915px) {
+        position: absolute;
+        width: 100%;
+        height: 480px;
+    }
+    & .left__side {
+        // position: absolute;
+        max-width: 297px;
+        height: 100%;
+        padding: 33px 0 0 20px;
+        & > * + * {
+            margin-top: 3px;
+        }
+        @media (max-width: 915px) {
+            padding: 22px 0 0 11px;
+        }
+    }
+}
+
+.arragemets__wrapper {
+    width: 100%;
+    // left: 12px;
+    margin-left: 12px;
+    position: relative;
+}
+
+.arragemets {
+    width: 70%;
+    height: 100%;
+    justify-content: space-between;
+    overflow-x: auto;
+    position: relative;
+
+    @media (max-width: 1200px) {
+        width: calc(36px + (623 - 425) * ((100vw - 425px) / (623 - 425)));
+    }
+    @media (max-width: 915px) {
+        width: calc(100px + (623 - 425) * ((100vw - 425px) / (623 - 425)));
+    }
+
+    &::-webkit-scrollbar {
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+    }
+}
+
+.grid__tamplate {
+    width: 1920px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    position: relative;
+    & .arrangements__items {
+        padding-top: 33px;
+        width: 100%;
+        position: absolute;
+        @media (max-width: 915px) {
+            padding-top: 22px;
+        }
+        & > * + * {
+            margin-top: 3px;
+        }
+        & .arrangements__item {
+            border-radius: 10px;
+            background-color: rgba(37, 37, 37, 0.4);
+        }
+    }
+
+    & .grid__coll {
+        background-color: #636363;
+        width: 2px;
+        height: 100%;
+        & p {
+            user-select: none;
+            color: #9e9e9e;
+            font-size: 12px;
+            margin-top: 12px;
+            margin-left: 6px;
+            @media (max-width: 915px) {
+                margin-top: 7px;
+            }
+        }
+        & span {
+            visibility: hidden;
+        }
+    }
+}
+.playIndicator {
+    top: 0;
+    left: 68px;
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #0099ef;
+    box-shadow: 0 0 20px 1px black;
+    @media (max-width: 915px) {
+        height: 48.2%;
+        top: 0;
+        // position: sticky;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        transform: translateX(-40%);
+        width: 24px;
+        height: 2px;
+        background-color: #0099ef;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateX(-40%);
+        width: 24px;
+        height: 2px;
+        background-color: #0099ef;
+    }
+}
+
+.trash__container {
+    right: 1.4%;
+    margin-top: 33px;
+    position: absolute;
+    z-index: 2;
+    @media (max-width: 915px) {
+        margin-top: 22px;
+    }
+    & > * + * {
+        margin-top: 3px;
+    }
+    & .trash__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(37, 37, 37, 0.4);
+        width: 31px;
+        height: 80px;
+        border-radius: 10px;
+        @media (max-width: 915px) {
+            height: 60px;
+            width: 45px;
+            & svg {
+                rotate: 90deg;
+            }
+        }
+        & svg {
+            fill: white;
+            width: 58%;
+            height: auto;
+        }
+    }
+}
+.grid__bottom {
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    background-color: #434343;
+    gap: 8px;
+    position: relative;
+    border-radius: 0 0 14px 14px;
+    padding: 0 23px;
+    & p {
+        font-size: 10px;
+        color: #979797;
+    }
+}
+
+.primary {
+    background: var(--track-primary-bg) !important;
+    & svg {
+        fill: var(--primary-color-bottom) !important;
+    }
+}
+.aqua {
+    background: var(--track-aqua-bg) !important;
+}
+.violet {
+    background: var(--track-violet-bg) !important;
+    & svg {
+        fill: var(--violet-color-bottom) !important;
+    }
+}
+.orange {
+    background: var(--track-orange-bg) !important;
+    & svg {
+        fill: var(--orange-color-bottom) !important;
+    }
+}
+.green {
+    background: var(--track-green-bg) !important;
+    & svg {
+        fill: var(--green-color-bottom) !important;
+    }
+}
+.yellow {
+    background: var(--track-yellow-bg) !important;
+    & svg {
+        fill: var(--yellow-color-bottom) !important;
+    }
+}
+
+@media (max-width: 915px) {
+    .primary {
+        background: linear-gradient(
+            var(--primary-color-bottom),
+            var(--primary-color-top)
+        ) !important;
+        & svg {
+            fill: white !important;
+        }
+    }
+    .aqua {
+        background: var(--track-aqua-bg) !important;
+    }
+    .violet {
+        background: linear-gradient(
+            var(--violet-color-bottom),
+            var(--violet-color-top)
+        ) !important;
+        & svg {
+            fill: white !important;
+        }
+    }
+    .orange {
+        background: linear-gradient(
+            var(--orange-color-bottom),
+            var(--orange-color-top)
+        ) !important;
+        & svg {
+            fill: white !important;
+        }
+    }
+    .green {
+        background: linear-gradient(
+            var(--green-color-bottom),
+            var(--green-color-top)
+        ) !important;
+        & svg {
+            fill: white !important;
+        }
+    }
+    .yellow {
+        background: linear-gradient(
+            var(--yellow-color-bottom),
+            var(--yellow-color-top)
+        ) !important;
+        & svg {
+            fill: white !important;
+        }
+    }
+}

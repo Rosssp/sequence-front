@@ -1,0 +1,81 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    & div {
+        align-items: center;
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        text-transform: lowercase;
+        gap: 8px;
+    }
+
+    & input[name="pan"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: 0;
+        width: 63px;
+        height: 4px;
+        border-radius: 1px;
+        &::-webkit-slider-thumb {
+            background-color: white;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0px 0px 2px 0px black;
+        }
+    }
+    & input[name="vol"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: 0;
+        width: 128px;
+        height: 4px;
+        border-radius: 2px;
+        &::-webkit-slider-thumb {
+            background-color: white;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0px 0px 2px 0px black;
+        }
+    }
+}
+.db {
+    text-transform: lowercase;
+}
+@media (max-width: 915px) {
+    .wrapper {
+        gap: 31px;
+        & div {
+            align-items: center;
+            font-size: 14px;
+            text-transform: uppercase;
+            gap: 9px;
+        }
+        & input[name="pan"] {
+            width: 89px;
+            height: 8px;
+            &::-webkit-slider-thumb {
+                width: 14px;
+                height: 15px;
+            }
+        }
+        & input[name="vol"] {
+            width: 89px;
+            height: 8px;
+            &::-webkit-slider-thumb {
+                width: 14px;
+                height: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
